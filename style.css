@@ -14,6 +14,9 @@
 .d-flex{
     display: flex;
 }
+img{
+    max-width: 100%;
+}
 
 /* #endregion utils */
 
@@ -27,6 +30,84 @@ a{
     text-decoration: none;
 }
 
+.mb-2{
+    margin-bottom: 2rem;
+}
+
+.mt-2{
+    margin-top: 2rem;
+}
+
+/* text  */
+h1{
+    font-size: 5rem;
+    font-weight: 900;
+    padding: 2rem 0;
+}
+
+.container{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+}
+
+/* columns */
+[class^="col"]{
+    padding: 0 1rem;
+}
+.col-1{
+    width: calc(100% / 12 * 2);
+}
+
+.col-2{
+    width: calc(100% / 12 * 2);
+}
+
+.col-3{
+    width: calc(100% / 12 * 3);
+}
+
+.col-4{
+    width: calc(100% / 12 * 4);
+}
+
+.col-5{
+    width: calc(100% / 12 * 5);
+}
+
+.col-6{
+    width: 50%;
+}
+
+.col-7{
+    width: calc(100% / 12 * 7);
+}
+
+.col-8{
+    width: calc(100% / 12 * 8);
+}
+
+.col-9{
+    width: calc(100% / 12 * 9);
+}
+
+.col-10{
+    width: calc(100% / 12 * 10);
+}
+
+.col-11{
+    width: calc(100% / 12 * 11);
+}
+
+.col-12{
+    width: 100%;
+}
+
 
 
 /* #endregion general */
@@ -37,7 +118,8 @@ header{
     padding: 1.5rem;
     position: sticky;
     top: 0;
-    margin: 0;
+    left: 0;
+    z-index: 100;
     background-color: white;
     .nav{
         justify-content: space-between;
@@ -61,6 +143,33 @@ header{
         }
         a:not(.btn):hover{
             border-bottom: 1px solid gray;
+        }
+    }
+}
+
+/* main  */
+main{
+    .hero{
+        background-color: var(--drop-hero-bg);
+        .container{
+            position: relative;
+            p{
+                font-size: 1.1rem;
+            }
+
+            a.btn{
+                background-color: var(--drop-primary);
+                font-size: 1.1rem;
+                padding: 0.5rem 1rem;
+                color: white;
+            }
+            i{
+                position: absolute;
+                bottom: 3%;
+                left: 0;
+                font-size: 3rem;
+                color: black;
+            }
         }
     }
 }
