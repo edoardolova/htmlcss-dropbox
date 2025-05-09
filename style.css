@@ -3,3 +3,64 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+:root{
+    --drop-primary: #1E72FE;
+    --drop-hero-bg: #B4D0E6;
+}
+
+/* #region utils */
+.d-flex{
+    display: flex;
+}
+
+/* #endregion utils */
+
+
+/* #region general */
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+/* #endregion general */
+
+
+/* header */
+header{
+    padding: 1.5rem;
+    position: sticky;
+    top: 0;
+    margin: 0;
+    background-color: white;
+    .nav{
+        justify-content: space-between;
+
+        ul{
+            align-items: center;
+            li:not(li:last-of-type){
+                margin-right: 1.5rem;
+            }
+            li{
+                a{
+                    color: black;
+                    padding-bottom: 0.3rem;
+                }
+                a.btn{
+                    background-color: var(--drop-primary);
+                    padding: 0.3rem 0.7rem;
+                    color: white;
+                }
+            }
+        }
+        a:not(.btn):hover{
+            border-bottom: 1px solid gray;
+        }
+    }
+}
