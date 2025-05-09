@@ -4,10 +4,15 @@
     box-sizing: border-box;
 }
 
-
 :root{
     --drop-primary: #1E72FE;
     --drop-hero-bg: #B4D0E6;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 /* #region utils */
@@ -45,8 +50,17 @@ h1{
     padding: 2rem 0;
 }
 
+h2{
+    font-size: 2rem;
+}
+
 .container{
     width: 70%;
+    margin: 0 auto;
+}
+
+.container-sm{
+    width: 65%;
     margin: 0 auto;
 }
 
@@ -169,6 +183,86 @@ main{
                 left: 0;
                 font-size: 3rem;
                 color: black;
+            }
+        }
+    }
+
+    .plans{
+        padding: 3rem 0;
+        .plans-card{
+            border: 1px solid grey;
+            .plan-card-top{
+                padding: 0.5rem 0;
+                border-bottom: 1px solid grey;
+                text-align: center;
+            }
+
+            .plan-card-body{
+                padding: 1.5rem;
+                
+                .plan-header{
+                    padding-bottom: 1.5rem;
+                    h3{
+                        font-size: 1.5rem;
+                        padding: 1rem 0;
+                    }
+                    .plan-price{
+                        font-weight: 700;
+                        padding: 0.5rem 0;
+                    }
+                    .plan-billing{
+                        font-size: 0.9rem;
+                        color: #777;  
+                        padding: 0.5rem 0;
+
+                    }
+                }
+
+                .plan-main{
+
+                    .feature{
+                        gap: 10px; 
+                        margin-bottom: 15px;
+                        i{
+                            font-size: 1rem;
+                        }
+                    }
+                    .plan-cta{
+                        padding: 2.5rem 0;
+                        flex-direction: column;
+                        .btn-plan{
+                            background-color: var(--drop-primary);
+                            font-size: 1.1rem;
+                            padding: 0.5rem 1rem;
+        
+                            text-align: center;
+                            color: white;
+                            width: 100%;
+                        }
+                        .cta-text{
+                            padding: 1.5rem 0;
+                        }
+                    }
+                }
+
+                .plan-footer{
+                    padding: 4rem 0;
+                    p:first-of-type{
+                        font-weight: 600;
+                    }
+                    .d-flex{
+                        gap: 5px;
+                    }
+                    p{
+                        margin-bottom: 1rem;
+                    }
+                    i{
+                        color: #1E72FE;
+                    }
+                }
+
+
+
             }
         }
     }
