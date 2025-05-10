@@ -33,6 +33,22 @@ ul{
 
 a{
     text-decoration: none;
+    color: black;
+
+}
+
+.btn{
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+.btn-primary{
+    background-color: var(--drop-primary);
+    color: white;
+}
+
+.btn-secondary{
+    border: 2px black solid;
 }
 
 .mb-2{
@@ -70,6 +86,7 @@ h2{
     margin: 0 auto;
 }
 
+/* row  */
 .row{
     display: flex;
     flex-wrap: wrap;
@@ -146,13 +163,7 @@ header{
             }
             li{
                 a{
-                    color: black;
                     padding-bottom: 0.3rem;
-                }
-                a.btn{
-                    background-color: var(--drop-primary);
-                    padding: 0.3rem 0.7rem;
-                    color: white;
                 }
             }
         }
@@ -165,7 +176,7 @@ header{
 /* main  */
 main{
     section{
-        margin-bottom: 5rem;
+        margin-bottom: 10rem;
     }
     .hero{
         background-color: var(--drop-hero-bg);
@@ -173,13 +184,6 @@ main{
             position: relative;
             p{
                 font-size: 1.1rem;
-            }
-
-            a.btn{
-                background-color: var(--drop-primary);
-                font-size: 1.1rem;
-                padding: 0.5rem 1rem;
-                color: white;
             }
             i{
                 position: absolute;
@@ -290,15 +294,6 @@ main{
                     .plan-cta{
                         padding: 2rem 0;
                         flex-direction: column;
-                        .btn-plan{
-                            background-color: var(--drop-primary);
-                            font-size: 1.1rem;
-                            padding: 0.5rem 1rem;
-        
-                            text-align: center;
-                            color: white;
-                            width: 100%;
-                        }
                         .cta-text{
                             padding-top: 1.5rem;
                             a{
@@ -331,6 +326,15 @@ main{
                         color: #1E72FE;
                     }
                 }
+            }
+        }
+    }
+
+    .partner{
+        .partner-description{
+            padding: 2rem;
+            p{
+                font-size: 1.2rem;
             }
         }
     }
