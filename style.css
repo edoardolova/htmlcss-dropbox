@@ -304,6 +304,7 @@ main{
                             padding-top: 1.5rem;
                             a{
                                 text-decoration: underline;
+                                color: #1E72FE;
                             }
                         }
                     }
@@ -352,10 +353,17 @@ main{
         h3{
             padding: 0;
         }
-            p{
-                font-size: 1.1rem;
-                padding: 2rem 0;
-            }
+        p{
+            font-size: 1.1rem;
+            padding: 2rem 0;
+        }
+    }
+
+    .trusted-by-section{
+        a{
+            text-decoration: underline;
+            color: #1E72FE;
+        }
 
     }
 }
