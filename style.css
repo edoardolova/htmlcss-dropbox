@@ -147,6 +147,7 @@ h3{
 .col-12{
     width: 100%;
 }
+
 /* #endregion columns */
 
 
@@ -365,5 +366,40 @@ main{
             color: #1E72FE;
         }
 
+    }
+}
+
+/* footer */
+footer{
+    background-color: black;
+    color: white;
+    /* padding: 4rem 0; */
+
+    .footer-links{
+        padding: 6rem 0;
+        div{
+            width: 20%;
+        }
+        li{
+            padding: 0.5rem 0;
+            font-weight: 300;
+        }
+        a{
+            color: white;
+        }
+    }
+
+    .language-switcher::before{
+        content: "";
+        height: 0.5px;
+        width: 10%;
+        background-color: white;
+        display: block;
+    }
+    .language-switcher{
+        p{
+            color: #777;
+            padding: 3rem 0;
+        }
     }
 }
