@@ -627,4 +627,39 @@ body.login-page{
 
 /* #endregion login page  */
 
+/* #region support page  */
+    body.support-page{
+        .container-sm{
+            >div:first-of-type{
+                padding: 3rem 0;
+                text-align: center;
+            }
+
+            .col-6{
+                position: relative;
+
+                top: 0;
+                left: 0;
+
+                .faq-card{
+                    border: 1px solid rgba(128, 128, 128, 0.222);
+                    border-radius: 25px;
+                    padding: 2rem;
+                    height: 100%;
+
+
+                }
+                a{
+                    font-size: 1rem;
+                    color: var(--drop-primary);
+                    position: absolute;
+                    bottom: 10%;
+                    left: 10%;
+                }
+            }
+        }
+    }
+
+/* #endregion support page  */
+
 
