@@ -662,4 +662,11 @@ body.login-page{
 
 /* #endregion support page  */
 
+/* #region why us page  */
+body.why-us-page{
+    section{
+        margin-bottom: 0;
+    }
+}
+/* #endregion why us page  */
 
