@@ -1,0 +1,443 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --drop-primary: #1E72FE;
+    --drop-hero-bg: #B4D0E6;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* arrow down bounce animation  */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+}
+/* #region utils */
+.d-flex{
+    display: flex;
+}
+img{
+    max-width: 100%;
+}
+
+/* #endregion utils */
+
+
+/* #region general */
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.btn{
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary{
+    color: var(--drop-primary);
+    border: 2px var(--drop-primary) solid;
+}
+.btn-primary:hover{
+    color: white;
+    background-color: var(--drop-primary);
+}
+
+.btn-secondary{
+    border: 2px black solid;
+}
+.btn-secondary:hover{
+    color: white;
+    background-color: black;
+}
+
+.mb-2{
+    margin-bottom: 2rem;
+}
+
+.mb-4{
+    margin-bottom: 4rem;
+}
+
+.pb-8{
+    padding-bottom: 8rem;
+}
+
+.mt-2{
+    margin-top: 2rem;
+}
+
+
+
+/* text  */
+h1{
+    font-size: 5rem;
+    font-weight: 900;
+    padding: 2rem 0;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 1rem 0;
+}
+
+.container{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.container-sm{
+    width: 65%;
+    margin: 0 auto;
+}
+
+/* row  */
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+}
+
+.row-gap-2{
+    row-gap: 2rem;
+}
+
+/* #region columns */
+[class^="col"]{
+    padding: 0 1rem;
+}
+.col-1{
+    width: calc(100% / 12 * 2);
+}
+.col-2{
+    width: calc(100% / 12 * 2);
+}
+.col-3{
+    width: calc(100% / 12 * 3);
+}
+.col-4{
+    width: calc(100% / 12 * 4);
+}
+.col-5{
+    width: calc(100% / 12 * 5);
+}
+.col-6{
+    width: 50%;
+}
+.col-7{
+    width: calc(100% / 12 * 7);
+}
+.col-8{
+    width: calc(100% / 12 * 8);
+}
+.col-9{
+    width: calc(100% / 12 * 9);
+}
+.col-10{
+    width: calc(100% / 12 * 10);
+}
+.col-11{
+    width: calc(100% / 12 * 11);
+}
+.col-12{
+    width: 100%;
+}
+
+/* #endregion columns */
+
+
+
+
+/* #endregion general */
+
+
+/* header */
+header{
+    padding: 1.5rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: white;
+    .nav{
+        justify-content: space-between;
+
+        ul{
+            align-items: center;
+            li:not(li:last-of-type){
+                margin-right: 1.5rem;
+            }
+            li{
+                img{
+                    cursor: pointer;
+                }
+                a:not(.btn):hover{
+                    padding-bottom: 0.2rem;
+                }
+            }
+        }
+        a:not(.btn):hover{
+            border-bottom: 1px solid gray;
+        }
+    }
+}
+
+/* main  */
+main{
+    section{
+        margin-bottom: 10rem;
+    }
+    >hr{
+        width: 65%;
+        margin: 1rem auto;
+        color: rgba(128, 128, 128, 0.229);
+    }
+    .hero{
+        background-color: var(--drop-hero-bg);
+        .container{
+            position: relative;
+            p{
+                font-size: 1.1rem;
+            }
+            i{
+                position: absolute;
+                bottom: 3%;
+                left: 0;
+                font-size: 3rem;
+                color: black;
+
+                /* animation  */
+                animation: bounce 2s infinite;
+            }
+
+        }
+
+        .col-8{
+            position: relative;
+            bottom: 0;
+            left: 0;
+
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+
+    #plans{
+        scroll-margin-top: 3rem;
+    }
+    .plans{
+        border-top: 1px solid rgba(128, 128, 128, 0.229);
+
+        h2{
+            padding: 2rem 0;
+            font-size: 3rem;
+        }
+
+        .billing-choice{
+            label{
+                input[type="radio"] {
+                    appearance: none;
+                    /* Safari, Chrome */        
+                    -webkit-appearance: none; 
+                    /* Firefox */
+                    -moz-appearance: none;
+                    /* my radio*/
+                    width: 1rem;
+                    height: 1rem;
+                    border: 2px solid rgba(128, 128, 128, 0.223);
+                    border-radius: 50%;
+                    background-color: #fff;
+                    position: relative;
+                    cursor: pointer;
+                }
+                input[type="radio"]:checked::after {
+                    content: "";
+                    width: 0.5rem;
+                    height: 0.5rem;
+                    background-color: white;
+                    border: 5px solid var(--drop-primary);
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            padding: 2rem 0;
+            gap: 3rem;
+        }
+
+        .plan-card{
+            border: 1px solid rgba(128, 128, 128, 0.229);
+            min-height: 100%;
+            transition: scale 0.3s ease, box-shadow 0.3s ease;
+
+            ul{
+                padding: 2rem 0;
+                li{
+                    gap: 10px;
+                    padding: 0.5rem 0;
+                }
+            }
+            .plan-card-top{
+                padding: 0.5rem 0;
+                border-bottom: 1px solid rgba(128, 128, 128, 0.229);
+                text-align: center;
+            }
+
+            .plan-card-body{
+                padding: 1.5rem;
+                
+                .plan-header{
+                    padding-bottom: 1rem;
+                    .plan-price{
+                        font-weight: 700;
+                        padding: 0.5rem 0;
+                    }
+                    .plan-billing{
+                        font-size: 0.9rem;
+                        color: #777;  
+                        padding: 0.5rem 0;
+                    }
+                }
+
+                .plan-main{
+                    .plan-cta{
+                        padding: 2rem 0;
+                        flex-direction: column;
+                        .cta-text{
+                            padding-top: 1.5rem;
+                            a{
+                                text-decoration: underline;
+                                color: #1E72FE;
+                            }
+                        }
+                    }
+                }
+
+                hr{
+                    width: 20%;
+                    color: rgba(128, 128, 128, 0.229);
+                }
+                .plan-footer{
+                    padding: 0rem 0;
+                    p:first-of-type{
+                        font-weight: 600;
+                    }
+                    .d-flex{
+                        gap: 5px;
+                    }
+                    p{
+                        margin-bottom: 1rem;
+                    }
+                    i{
+                        color: #1E72FE;
+                    }
+                }
+            }
+        }
+
+        .plan-card:hover{
+            scale: 1.05;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+
+    }
+
+    .partner{
+        .partner-description{
+            padding: 2rem;
+            p{
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .dropbox-business{
+        h2{
+            font-size: 3rem;
+        }
+        h3{
+            padding: 0;
+        }
+        p{
+            font-size: 1.1rem;
+            padding: 2rem 0;
+        }
+
+        .col-4{
+            transition: scale 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .col-4:hover{
+            scale: 1.05;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+        }
+
+    }
+
+
+}
+
+/* footer */
+footer{
+    background-color: black;
+    color: white;
+    /* padding: 4rem 0; */
+
+    .footer-links{
+        padding: 6rem 0;
+        div{
+            width: 20%;
+        }
+        li{
+            padding: 0.5rem 0;
+            font-weight: 300;
+        }
+        a{
+            color: white;
+        }
+        a:hover{
+            border-bottom: 1px solid white;
+        }
+    }
+
+    hr{
+        width: 10%;
+        color: white;
+    }
+    .language-switcher{
+        p{
+            color: #777;
+            padding: 3rem 0;
+            i:last-of-type{
+                cursor: pointer;
+            }
+        }
+    }
+}
