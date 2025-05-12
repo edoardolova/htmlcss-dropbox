@@ -173,8 +173,11 @@ header{
                 margin-right: 1.5rem;
             }
             li{
-                a{
-                    padding-bottom: 0.3rem;
+                img{
+                    cursor: pointer;
+                }
+                a:not(.btn):hover{
+                    padding-bottom: 1.7rem;
                 }
             }
         }
@@ -311,14 +314,10 @@ main{
                     }
                 }
 
-                .plan-footer::before{
-                    content: "";
-                    display: block;
+                hr{
                     width: 20%;
-                    height: 0.5px;
-                    background-color: rgba(128, 128, 128, 0.229);
+                    color: rgba(128, 128, 128, 0.229);
                 }
-
                 .plan-footer{
                     padding: 0rem 0;
                     p:first-of-type{
@@ -389,17 +388,17 @@ footer{
         }
     }
 
-    .language-switcher::before{
-        content: "";
-        height: 0.5px;
+    hr{
         width: 10%;
-        background-color: white;
-        display: block;
+        color: white;
     }
     .language-switcher{
         p{
             color: #777;
             padding: 3rem 0;
+            i:last-of-type{
+                cursor: pointer;
+            }
         }
     }
 }
