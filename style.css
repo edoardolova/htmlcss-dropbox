@@ -9,6 +9,10 @@
     --drop-hero-bg: #B4D0E6;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;

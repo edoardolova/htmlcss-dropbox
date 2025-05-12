@@ -9,6 +9,10 @@
     --drop-hero-bg: #B4D0E6;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
@@ -728,3 +732,60 @@ body.function-page{
 }
 /* #endregion function page  */
 
+/* #region login page  */
+
+body.contact-us-page{
+    .contact-us{
+        padding-top: 1rem;
+    }
+
+    .form{
+        text-align: center;
+        padding: 1rem 1.5rem;
+        border: 1px solid #ccc;
+        border-radius: 25px;
+        color: var(--drop-primary);
+        display: flex;
+        flex-direction: column;
+
+        input[type="text"]{
+            width: 70%;
+            margin: 10px auto;
+            padding: 10px 5px;
+            border: none;
+            border-bottom: 2px solid #ccc;
+            background: transparent;
+            outline: none;
+            font-size: 1rem;
+            color: #555;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-bottom: 2px solid #A15AF6;
+        }
+
+        .form-cta{
+            padding: 1rem 0;
+            a{
+                width: 50%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .col-7{
+        padding: 3rem ;
+        text-align: center;
+        h3{
+            font-weight: 900;
+            padding: 2rem 0;
+        }
+        img{
+            max-width: 120%;
+        }
+    }
+
+}
+
+/* #endregion contact us page  */
