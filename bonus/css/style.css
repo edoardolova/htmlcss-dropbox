@@ -196,9 +196,10 @@ header{
                 }
             }
         }
-        a:not(.btn):hover{
+        a:not(.btn):not(.logo):hover{
             border-bottom: 1px solid gray;
         }
+
     }
 }
 
@@ -441,3 +442,127 @@ footer{
         }
     }
 }
+
+
+/* #region plans page  */
+
+
+
+
+
+
+
+
+body.plans-page{
+    headre{
+
+    }
+    .container{
+        
+        h1{
+            font-size: 3rem;
+            text-align: center;
+        }
+        >div>p{
+            text-align: center;
+        };
+        .billing-choice{
+            font-size: 1.5rem;
+            label{
+                input[type="radio"]{
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+                input[type="radio"]:checked::after {
+                    width: 0.5rem;
+                    height: 0.5rem;
+                    border: 8px solid var(--drop-primary);
+
+                }
+            }
+            
+        }
+        .plan-card{
+            border-radius: 25px;
+            background-color: #FAF9F7;
+        }
+
+    }
+    .compare-plans{
+        h2{
+            font-size: 3.5rem;
+            padding: 2rem 0;
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+
+            thead{
+                th:nth-child(2){
+                    background-color: #FAF9F7;
+                }
+                th:nth-child(3){
+                    background-color: #F7F5F2;
+                }
+                th:nth-child(4){
+                    background-color: #F2EEE8;
+                }
+                th:nth-child(5){
+                    background-color: #EEE9E2;
+                }               
+            }
+
+            tbody{
+                td:nth-child(2){
+                    background-color: #FAF9F7;
+                }
+                td:nth-child(3){
+                    background-color: #F7F5F2;
+                }
+                td:nth-child(4){
+                    background-color: #F2EEE8;
+                }
+                td:nth-child(5){
+                    background-color: #EEE9E2;
+                }  
+                
+                i{
+                    font-size: 2rem;
+                    color: var(--drop-primary);
+                }
+            }
+
+            th{
+                padding: 1.5rem;
+                font-size: 2rem;
+
+                span{
+                    font-size: 0.9rem;
+
+                }
+            }
+
+            td{
+                padding: 1rem 0.5rem;
+                text-align: center;
+                width: 20%;
+            }
+
+            th, td {
+                border: 1px solid #ddd;
+
+            }
+
+            tbody{
+                th{
+                    text-align: start;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+
+/* #endregion plans page  */
+
